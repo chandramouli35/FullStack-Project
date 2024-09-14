@@ -1,0 +1,131 @@
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.about-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(0, 0, 0, 0.75);
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite;
+}
+
+.personal-info h2,
+.education h2,
+.skills h2 {
+  font-family: "Arial", sans-serif; /* Consider customizing the font */
+  color: #007bff;
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.personal-info p,
+.education p,
+.skills li {
+  margin: 5px 0;
+}
+
+.personal-info a,
+.personal-info a:visited {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.personal-info a:hover,
+.education li:hover,
+.skills li:hover {
+  text-decoration: underline;
+  background-color: #f1f1f1;
+}
+
+.education ul,
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.education li,
+.skills li {
+  transition: transform 0.3s ease;
+}
+
+.education li:hover,
+.skills li:hover {
+  transform: scale(1.05);
+}
+
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills li {
+  flex: 1 1 45%;
+  margin: 5px;
+  background-color: #eef;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .about-container {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .about-container h1 {
+  border-right-color: rgba(255, 255, 255, 0.75);
+}
+
+body.dark-mode .personal-info a,
+body.dark-mode .personal-info a:visited {
+  color: #66ccff;
+}
+
+body.dark-mode .personal-info a:hover,
+body.dark-mode .education li:hover,
+body.dark-mode .skills li:hover {
+  background-color: #555;
+}
+
+body.dark-mode .skills li {
+  background-color: #444;
+}

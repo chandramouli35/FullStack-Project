@@ -1,0 +1,12 @@
+/* YoutubeVideos.css */
+
+.Types-Of-content-Available {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
