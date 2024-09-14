@@ -174,7 +174,7 @@ const Contact = () => {
             required
           ></textarea>
 
-          <button type="submit">Send Message</button>
+          <button type="submit">Send Message To me</button>
         </form>
       </div>
     </div>
